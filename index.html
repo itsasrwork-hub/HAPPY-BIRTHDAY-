@@ -18,10 +18,10 @@ font-family:Poppins,sans-serif;
 body{
 background:linear-gradient(135deg,#09011b,#2d0b59,#ff0080);
 height:100vh;
-overflow:hidden;
+overflow-y:auto;
 display:flex;
-justify-content:center;
-align-items:center;
+justify-content:flex-start;
+align-items:flex-start;
 color:white;
 }
 
@@ -123,15 +123,15 @@ function start(){
 
 document.body.innerHTML=`
 
-<div style="height:100vh;
+<div style="
+min-height:100vh;
+padding:40px;
+background:linear-gradient(135deg,#0d0221,#ff0080);
 display:flex;
-justify-content:center;
-align-items:center;
 flex-direction:column;
-text-align:center;
-padding:30px;
-background:linear-gradient(135deg,#0d0221,#ff0080);">
-
+align-items:center;
+overflow-y:auto;
+">
 <h1 style="font-size:60px;">
 Happy Birthday Nikki ❤️
 </h1>
