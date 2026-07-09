@@ -1,36 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nikki ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#09011b,#2d0b59,#ff0080);
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.hero{
+text-align:center;
+z-index:5;
+}
+
+h1{
+font-size:70px;
+margin-bottom:20px;
+text-shadow:0 0 20px hotpink;
+animation:fade 2s;
+}
+
+h2{
+font-size:28px;
+font-weight:300;
+margin-bottom:30px;
+}
+
+button{
+padding:18px 45px;
+font-size:20px;
+border:none;
+border-radius:50px;
+background:#ff4fa3;
+color:white;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-10vh);
+}
+100%{
+transform:translateY(110vh);
+}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+
 </head>
 
 <body>
 
 <div class="hero">
 
-    <h3>🎉 Happy Birthday 🎉</h3>
+<h2>✨ For Someone Very Special ✨</h2>
 
-    <h1>My Love ❤️</h1>
+<h1>NIKKI ❤️</h1>
 
-    <p id="message">
-        Every moment with you is my favourite memory.
-    </p>
+<p style="font-size:22px;margin-bottom:35px;">
+10 July 2000
+</p>
 
-    <button id="surpriseBtn">
-        Click for Surprise 🎁
-    </button>
+<button onclick="start()">
+Open My Surprise 🎁
+</button>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(4+Math.random()*6)+"s";
+
+h.style.fontSize=(15+Math.random()*35)+"px";
+
+document.body.appendChild(h);
+
+}
+
+function start(){
+
+document.body.innerHTML=`
+
+<div style="height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+padding:30px;
+background:linear-gradient(135deg,#0d0221,#ff0080);">
+
+<h1 style="font-size:60px;">
+Happy Birthday Nikki ❤️
+</h1>
+
+<h2 style="margin-top:20px;">
+Made with ❤️ by Amit
+</h2>
+
+<p style="margin-top:35px;font-size:24px;max-width:800px;line-height:1.8;">
+
+Dear Nikki ❤️
+
+You are the most beautiful part of my life.
+
+Every smile of yours makes my day brighter.
+
+I don't know what tomorrow holds...
+
+But I know one thing...
+
+I'll always pray for your happiness.
+
+Happy Birthday My Love ❤️
+
+</p>
+
+</div>
+
+`;
+
+}
+
+</script>
 
 </body>
 </html>
